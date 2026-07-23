@@ -2,7 +2,7 @@ import SectionHeading from "../components/SectionHeading";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
 
-export default function Projects() {
+export default function Projects({ onOpenDetails }) {
   return (
     <section id="projects" className="relative py-24 md:py-32">
       <div className="section-container">
@@ -14,7 +14,7 @@ export default function Projects() {
 
         <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+            <ProjectCard key={project.id} project={project} index={i} onOpenDetails={onOpenDetails} />
           ))}
         </div>
       </div>
