@@ -13,11 +13,11 @@ const LINKS = [
   { id: "contact", label: "Contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ currentView, onViewProjects, onViewHome }) {
   const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const active = useActiveSection(LINKS.map((l) => l.id));
+  const active = currentView === "projects-hub" ? "projects" : useActiveSection(LINKS.map((l) => l.id));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -28,7 +28,14 @@ export default function Navbar() {
 
   const handleLinkClick = (id) => {
     setOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (id === "projects") {
+      onViewProjects();
+    } else {
+      onViewHome();
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
   };
 
   return (

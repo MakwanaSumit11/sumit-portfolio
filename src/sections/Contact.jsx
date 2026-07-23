@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FiCheck, FiGithub, FiLinkedin, FiMail, FiMapPin, FiSend } from "react-icons/fi";
+import { FiCheck, FiGithub, FiLinkedin, FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 import SectionHeading from "../components/SectionHeading";
 import GradientBlobs from "../components/GradientBlobs";
 
 const contactLinks = [
-  { icon: FiMail, label: "Email", value: "hello@sumit11.tech", href: "mailto:hello@sumit11.tech" },
-  { icon: FiLinkedin, label: "LinkedIn", value: "/in/sumit-makwana", href: "https://linkedin.com" },
-  { icon: FiGithub, label: "GitHub", value: "/sumitmakwana", href: "https://github.com" },
-  { icon: FiMapPin, label: "Location", value: "Gujarat, India", href: null },
+  { icon: FiMail, label: "Email", value: "makwanasumit011@gmail.com", href: "mailto:makwanasumit011@gmail.com" },
+  { icon: FiPhone, label: "Phone", value: "+91 81560 26848", href: "tel:+918156026848" },
+  { icon: FiLinkedin, label: "LinkedIn", value: "sumit-makwana-08523524b", href: "https://www.linkedin.com/in/sumit-makwana-08523524b/" },
+  { icon: FiGithub, label: "GitHub", value: "MakwanaSumit11", href: "https://github.com/MakwanaSumit11" },
+  { icon: FiMapPin, label: "Location", value: "Ahmedabad, Gujarat, India - 382470", href: null },
 ];
 
 export default function Contact() {

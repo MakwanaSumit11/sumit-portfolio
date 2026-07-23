@@ -8,13 +8,13 @@ export default function Footer() {
           Made with <span className="text-[var(--color-accent-purple)]">❤</span> by Sumit Makwana
         </p>
         <div className="flex items-center gap-4">
-          <a href="mailto:hello@sumit11.tech" aria-label="Email" className="text-[var(--text-faint)] transition-colors hover:text-[var(--color-accent-cyan)]">
+          <a href="mailto:makwanasumit011@gmail.com" aria-label="Email" className="text-[var(--text-faint)] transition-colors hover:text-[var(--color-accent-cyan)]">
             <FiMail />
           </a>
-          <a href="https://github.com" aria-label="GitHub" className="text-[var(--text-faint)] transition-colors hover:text-[var(--color-accent-cyan)]">
+          <a href="https://github.com/MakwanaSumit11" aria-label="GitHub" className="text-[var(--text-faint)] transition-colors hover:text-[var(--color-accent-cyan)]">
             <FiGithub />
           </a>
-          <a href="https://linkedin.com" aria-label="LinkedIn" className="text-[var(--text-faint)] transition-colors hover:text-[var(--color-accent-cyan)]">
+          <a href="https://www.linkedin.com/in/sumit-makwana-08523524b/" aria-label="LinkedIn" className="text-[var(--text-faint)] transition-colors hover:text-[var(--color-accent-cyan)]">
             <FiLinkedin />
           </a>
         </div>

@@ -14,7 +14,7 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-export default function Hero() {
+export default function Hero({ onViewProjects }) {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
@@ -57,13 +57,11 @@ export default function Hero() {
           </motion.h2>
 
           <motion.p variants={item} className="mt-6 max-w-lg text-base leading-relaxed text-[var(--text-muted)] md:text-lg">
-            I design and build fast, reliable web systems — and the AI features
-            layered on top of them — turning ambitious ideas into products
-            that ship.
+            I design and build mobile apps, databases, and AI systems — turning ambitious ideas into products that ship.
           </motion.p>
 
           <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-3">
-            <PrimaryButton href="#projects" onClick={(e) => { e.preventDefault(); scrollTo("projects"); }}>
+            <PrimaryButton href="#projects" onClick={(e) => { e.preventDefault(); onViewProjects(); }}>
               View Projects
             </PrimaryButton>
             <SecondaryButton href="/resume.pdf" download>
